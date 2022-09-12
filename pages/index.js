@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Header from '../Components/Header';
 import React from 'react';
 
@@ -13,29 +12,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Left */}
-      <div className='flex items-center justify-between max-w-6xl'>
-        <div className='cursor-pointer h-24 w-24 relative hidden lg:inline-grid'>
-          <Image
-            src="https://images.squarespace-cdn.com/content/v1/5adf4ed996d455fa43a2ffdf/1528311283669-7OGTTIYTDC3WE6ST7VKM/instagram-logo-text-black-png.png?format=1000w"
-            layout='fill'
-            className='object-contain'
-          />
-        </div>
-        <div className='cursor-pointer h-24 w-10 relative  lg:hidden'>
-          <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
-            layout='fill'
-            className='object-contain'
-          />
-        </div>
-        <h1>Right side</h1>
-</div>
+      {/* Header */}
+      <Header />
 
-      {/* Middle */}
+      {/* Feed */}
 
 
-      {/* Right */}
+      {/* Modal */}
     </div>
   )
 }
