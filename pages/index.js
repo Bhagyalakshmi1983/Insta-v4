@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '../Components/Header';
 import React from 'react';
 import Feed from '../Components/Feed';
+import UploadModal from '../Components/UploadModal';
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
 <Feed />
 
       {/* Modal */}
+      <UploadModal />
     </div>
   )
 }
