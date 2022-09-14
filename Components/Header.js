@@ -6,7 +6,6 @@ import {useSession,signIn,signOut} from "next-auth/react"
 
 export default function Header() {
   const { data: session } = useSession();
-  console.log(session)
   return (
     <div className="shadow-sm border-b sticky top-0 bg-white z-30">
       <div className='flex items-center justify-between max-w-6xl mx-4 xl:mx-auto'>
@@ -39,7 +38,7 @@ export default function Header() {
             <>
 <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
               <img onClick={signOut}
-                src="../images/DBVL7306.JPG" alt="user-image" className="h-10 rounded-full cursor-pointer" />
+                src={session.user?.image} alt="user-image" className="h-10 rounded-full cursor-pointer" />
             </>
           ) : (
             <button onClick={signIn}>Sign in</button>
